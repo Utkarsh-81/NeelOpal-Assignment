@@ -7,9 +7,14 @@ flex property instead, if you want me to add media queries please let me know  *
 }
 
 .icons {
+  color: gray;
   cursor: pointer;
   height: 22px;
   width: 22px;
+}
+
+.icons:hover {
+  color: #1890ff;
 }
 
 .iconsContainer {

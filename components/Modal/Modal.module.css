@@ -1,0 +1,97 @@
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #1890ff;
+  padding-bottom: 10px;
+}
+
+.modal label {
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+/* Add a red asterisk before each label */
+.modal label::before {
+  content: "*";
+  color: #ff4d4f;
+  margin-right: 4px;
+}
+.modal input {
+  width: calc(100% - 18px);
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+}
+
+.modal input:hover {
+  border-color: #1890ff;
+}
+
+.modal input:focus {
+  border-color: #1890ff;
+  box-shadow: 0 0 5px rgba(24, 144, 255, 0.7);
+}
+
+.modal label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.modal input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.modal_buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal_button {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.modal_button {
+  background-color: #1890ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal_button:hover {
+  background-color: #126bbd;
+}

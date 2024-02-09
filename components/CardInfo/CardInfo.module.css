@@ -1,0 +1,88 @@
+/* I have not added much media query, because I handled the responsiveness using 
+flex property instead, if you want me to add media queries please let me know  */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.icons {
+  cursor: pointer;
+  height: 22px;
+  width: 22px;
+}
+
+.iconsContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100% !important;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #fafafa;
+  border-top: 1px solid #e8e8e8;
+  zoom: 1;
+}
+
+.text_styles {
+  margin: 0 0 5px 10px;
+}
+
+.nameContainer {
+  display: flex;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.name_section {
+  width: 100%;
+}
+
+.name {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 600;
+  font-variant: tabular-nums;
+  line-height: 1.5;
+  list-style: none;
+  -webkit-font-feature-settings: "tnum";
+  font-feature-settings: "tnum", "tnum";
+}
+
+.img {
+  background-color: #f5f5f5;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.img_conatiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 340px;
+  height: 100%;
+  margin: 10px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  position: relative;
+}
+
+@media only screen and (max-width: 755px) {
+  .img_conatiner {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .name_section {
+    display: flex;
+    justify-content: center;
+  }
+  .iconsContainer {
+    width: 70% !important;
+  }
+}

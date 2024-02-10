@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./Modal.module.css";
+import { RxCross1 } from "react-icons/rx";
 
 const Modal = ({ person, onSave, onClose }) => {
   const [editedData, setEditedData] = useState({ ...person });
@@ -16,7 +17,10 @@ const Modal = ({ person, onSave, onClose }) => {
   return (
     <div className={styles.modal_overlay}>
       <div className={styles.modal}>
-        <h2>Edit Person</h2>
+        <div className={styles.header_container}>
+          <h2>Edit Person</h2>
+          <RxCross1 className={styles.crossIcon} onClick={onClose} />
+        </div>
         <label>
           Name:
           <input
@@ -54,11 +58,11 @@ const Modal = ({ person, onSave, onClose }) => {
           />
         </label>
         <div className={styles.modal_buttons}>
+          <button className={styles.cancel_button} onClick={onClose}>
+            Cancel
+          </button>
           <button className={styles.modal_button} onClick={handleSave}>
             Ok
-          </button>
-          <button className={styles.modal_button} onClick={onClose}>
-            Cancel
           </button>
         </div>
       </div>

@@ -11,19 +11,38 @@
 }
 
 .modal {
+  border-radius: 4px;
   background: #fff;
-  border-radius: 8px;
-  padding: 20px;
+  padding: 24px;
   width: 300px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 20px;
+}
+
 .modal h2 {
-  text-align: center;
-  margin-bottom: 15px;
+  text-align: left;
   font-size: 20px;
-  color: #1890ff;
   padding-bottom: 10px;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 500;
+  line-height: 22px;
+  border-radius: 4px 4px 0 0;
+}
+
+.crossIcon {
+  margin-top: 18px;
+  color: rgba(0, 0, 0, 0.65);
+  cursor: pointer;
+}
+
+.crossIcon:hover {
+  color: black;
 }
 
 .modal label {
@@ -38,6 +57,7 @@
   color: #ff4d4f;
   margin-right: 4px;
 }
+
 .modal input {
   width: calc(100% - 18px);
   padding: 10px;
@@ -67,31 +87,95 @@
   width: 100%;
   padding: 8px;
   margin-top: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   box-sizing: border-box;
 }
 
 .modal_buttons {
   display: flex;
-  justify-content: space-around;
+  justify-content: right;
+  border-top: 1px solid #e8e8e8;
+  margin-bottom: 25px;
 }
 
-.modal_button {
+.modal_button .cancel_button {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
 }
 
+.cancel_button {
+  line-height: 1.499;
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: center;
+  background-image: none;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  height: 32px;
+  padding: 0 15px;
+  font-size: 14px;
+  border-radius: 4px;
+  color: rgba(0, 0, 0, 0.65);
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  margin-top: 20px;
+}
+
 .modal_button {
+  line-height: 1.499;
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: center;
+  background-image: none;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  height: 32px;
+  padding: 0 15px;
+  font-size: 14px;
+  border-radius: 4px;
+  color: rgba(0, 0, 0, 0.65);
+  border: 1px solid #1890ff;
   background-color: #1890ff;
   color: white;
-  padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-left: 8px;
+  margin-top: 20px;
 }
 
 .modal_button:hover {
-  background-color: #126bbd;
+  background-color: #3a9cf7;
+}
+
+.cancel_button:hover {
+  color: #1890ff;
+}
+
+@media only screen and (min-width: 768px) {
+  .modal {
+    border-radius: 4px;
+    background: #fff;
+    padding: 24px;
+    width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
 }
